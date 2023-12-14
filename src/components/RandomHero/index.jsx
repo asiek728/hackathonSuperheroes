@@ -6,6 +6,7 @@ const RandomHero = () => {
     const [hero, setHero] = useState([])
     const [heroImage, setHeroImage] = useState("")
     const { heroes, setHeroes } = useHeroes([])
+    const [loading, setLoading] = useState(true);
 
 
     useEffect(() => {
@@ -15,12 +16,9 @@ const RandomHero = () => {
     const displayRandomHero = async () => {
         const randomHeroID = Math.floor(Math.random() * 731) + 1
         const { data } = await axios.get(`https://www.superheroapi.com/api.php/7416168271735107/${randomHeroID}`)
-
         setHero(data)
-        console.log("heroData: ",  hero)
         setHeroImage(data.image.url)
-        console.log(heroes);
-
+        setLoading(false)
     }
 
     const addHeroToLiked = () => {
@@ -38,7 +36,11 @@ const RandomHero = () => {
     return (
         <div>
             <button onClick={displayRandomHero}>No</button>
-            <img src={heroImage} />
+            {
+                loading
+                    ? <p style={{ marginTop: "200px", fontSize: "60px" }}>Loading...</p>
+                    : <img src={heroImage} />
+            }
             <button onClick={addHeroToLiked}>Yes</button>
         </div>
     )
