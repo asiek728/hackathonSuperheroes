@@ -11,9 +11,7 @@ const Instruction = () => {
              
             </div>
             <div className="instruction-container">
-                <div>
-               
-                </div>
+    
                 <Carousel className="carousel">
                 <Carousel.Item className="intro-image">
                         <img  src={"https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"} alt="batman" />
@@ -26,6 +24,13 @@ const Instruction = () => {
                         <div className="carousel-info">
                             <h4>See all your liked sups </h4> 
                         </div>
+                    </Carousel.Item>
+                    <Carousel.Item className="intro-image">
+                        <img id="" src="/public/hero-stats.jpg" alt="hero-stats" />
+                          <div className="carousel-info">
+                            <h4>See the stats</h4> 
+                        </div>
+
                     </Carousel.Item>
                 </Carousel>
 
