@@ -6,23 +6,26 @@ const RandomHero = () => {
     const [heroImage, setHeroImage] = useState("")
 
     useEffect(() => {
-
-        const randomHeroID = Math.floor(Math.random() * 731) + 1
-
-        const displayRandomHero = async () => {
-            const { data } = await axios.get(`https://www.superheroapi.com/api.php/7416168271735107/${randomHeroID}`)
-            setHero(data)
-            setHeroImage(data.image.url)
-        }
         displayRandomHero()
     }, [])
 
+    const displayRandomHero = async () => {
+        const randomHeroID = Math.floor(Math.random() * 731) + 1
+        const { data } = await axios.get(`https://www.superheroapi.com/api.php/7416168271735107/${randomHeroID}`)
+        setHero(data)
+        setHeroImage(data.image.url)
+    }
+
+    const addHeroToLiked = () => {
+        console.log("add hero")
+        displayRandomHero();
+    }
 
     return (
         <div>
-            <button>Yes</button>
+            <button onClick={displayRandomHero}>No</button>
             <img src={heroImage} />
-            <button>No</button>
+            <button onClick={addHeroToLiked}>Yes</button>
         </div>
     )
 }
