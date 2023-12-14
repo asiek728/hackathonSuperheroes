@@ -1,0 +1,25 @@
+
+
+.heroes-container{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 16px;
+    padding: 4em 0;
+
+    
+}
+
+.hero-card{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.hero-card:hover{
+    transform: scale(1.03);
+}
+
+.heroes-container img{
+    height: 400px;
+    border-radius: 10px;
+}
