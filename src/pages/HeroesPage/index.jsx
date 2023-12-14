@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useHeroes } from '../../contexts'
 import { useNavigate } from 'react-router-dom';
+import './index.css'
+
 const HeroesPage = () => {
     const { heroes } = useHeroes();
     const navigate = useNavigate()
@@ -10,9 +12,9 @@ const HeroesPage = () => {
   }, [heroes]);
 
   return (
-    <div>
+    <div className="heroes-container" >
       {heroes.map((hero) => (
-        <div key={hero.id} onClick={() => navigate(`/hero/${hero.id}`)}>
+        <div key={hero.id} onClick={() => navigate(`/hero/${hero.id}`)} className="hero-card">
               <img src={hero.image?.url} alt="hero-pic" />
               <h4>{hero.name}</h4>
         </div>
