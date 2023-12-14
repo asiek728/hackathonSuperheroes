@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import { Link, useNavigate } from 'react-router-dom'
+import Carousel from 'react-bootstrap/Carousel';
 
 const Instruction = () => {
     const navigate = useNavigate()
@@ -13,10 +14,17 @@ const Instruction = () => {
                 <div>
                
                 </div>
-                <div className="intro-image">
-                    <img id="intro-image" src={"https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"} alt="batman" />
-                         <h2>Select your superheroes </h2>
-                </div>
+                <Carousel className="carousel">
+                <Carousel.Item className="intro-image">
+                        <img id="intro-image" src={"https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"} alt="batman" />
+                       <div className="carousel-info">
+                            <h4>Select your superheroes </h4> 
+                        </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <h1>Go</h1>
+                    </Carousel.Item>
+                </Carousel>
 
 
 
