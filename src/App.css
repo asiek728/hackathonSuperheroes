@@ -44,3 +44,24 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+.heroImage {
+  width: 25%;
+  margin: 2px;
+  transition: all .5s ease-in-out;
+}
+
+.heroImage:hover { transform: scale(1.1); }
+
+
+.heroesGallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;
+  padding: 10px;
+}

@@ -6,12 +6,11 @@ const HomePage = () => {
     return (
         <>
             <div className="intro">
-                <Instruction/>
+                {/* <Instruction/> */}
             </div>
 
             <div id="hero">
                 <RandomHero />
-                <button>see liked heroes</button>
             </div>
         </>
     )
