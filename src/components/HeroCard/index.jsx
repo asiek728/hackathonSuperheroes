@@ -3,7 +3,7 @@ import React from 'react'
 const HeroCard = ({ hero }) => {
     return (
         <>
-            <h1> {hero.name} </h1>
+            <h2 style={{color: "red"}}> {hero.name} </h2>
             <img src={hero.image?.url} alt="hero-pic" />
             <h2>Hero stats:</h2>
             <p>Intelligence: {hero.powerstats.intelligence}</p>
