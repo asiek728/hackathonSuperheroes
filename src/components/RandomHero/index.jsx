@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useHeroes } from '../../contexts'
 
 const RandomHero = () => {
     const [hero, setHero] = useState("")
     const [heroImage, setHeroImage] = useState("")
+    const { heroes, setHeroes } = useHeroes()
+
 
     useEffect(() => {
         displayRandomHero()
@@ -14,10 +17,15 @@ const RandomHero = () => {
         const { data } = await axios.get(`https://www.superheroapi.com/api.php/7416168271735107/${randomHeroID}`)
         setHero(data)
         setHeroImage(data.image.url)
+        console.log(heroes);
+
     }
 
     const addHeroToLiked = () => {
-        console.log("add hero")
+        setHeroes([
+            ...heroes,
+            hero
+           ])
         displayRandomHero();
     }
 
