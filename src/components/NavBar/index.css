@@ -1,0 +1,26 @@
+header{
+    margin-bottom: 2em;
+
+}
+
+
+
+nav{
+    display: flex; 
+    flex-direction: row ;
+    justify-content: space-between;
+}
+
+.nav-links a{
+    margin-right: 2em;
+}
+
+h1 {
+
+
+    font-family: 'BadaBoom BB', sans-serif;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 8px -4px black;
+
+}
