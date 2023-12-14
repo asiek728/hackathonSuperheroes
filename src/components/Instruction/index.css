@@ -1,0 +1,28 @@
+@import url('https://fonts.cdnfonts.com/css/badaboom-bb');
+
+.title{
+    color:gold;
+    font-family: 'BadaBoom BB', sans-serif;                            
+}
+
+h1{
+     -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+    text-shadow: 8px -4px black;
+
+}
+
+
+h2{
+    color: red;
+}
+
+.instruction-section{
+    min-height: 100vh;
+    padding-bottom: 6em;
+}
+
+.intro-image img{
+    border-radius: 10px; 
+    height: 400px;
+}
