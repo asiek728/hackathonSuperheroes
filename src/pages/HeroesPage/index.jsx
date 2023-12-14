@@ -1,9 +1,13 @@
 import React from 'react'
+import { useHeroes } from '../../contexts'
 
 const HeroesPage = () => {
-  return (
-    <div>HeroesPage</div>
-  )
+
+    const { heroes, setHeroes } = useHeroes()
+
+    return (
+        <div>HeroesPage</div>
+    )
 }
 
 export default HeroesPage
