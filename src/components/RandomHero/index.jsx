@@ -24,10 +24,14 @@ const RandomHero = () => {
     }
 
     const addHeroToLiked = () => {
-        setHeroes([
-            ...heroes,
-            hero
-           ])
+         const updatedHeroes = [...heroes, hero];
+
+    // Update state with the new array of heroes
+    setHeroes(updatedHeroes);
+
+    // Store the updated array in localStorage (converted to JSON)
+    // localStorage.setItem('heroes', JSON.stringify(updatedHeroes))
+    
         displayRandomHero();
     }
 
