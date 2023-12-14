@@ -20,13 +20,13 @@ const Instruction = () => {
                         </div>
                     </Carousel.Item>
                     <Carousel.Item  className="intro-image">
-                        <img id="heroes-image" src="/public/heroes.jpg" alt="heroes" />
+                        <img id="heroes-image" src="./public/heroes.jpg" alt="heroes" />
                         <div className="carousel-info">
                             <h4>See all your liked sups </h4> 
                         </div>
                     </Carousel.Item>
                     <Carousel.Item className="intro-image">
-                        <img id="" src="/public/hero-stats.jpg" alt="hero-stats" />
+                        <img id="" src="./public/hero-stats.jpg" alt="hero-stats" />
                           <div className="carousel-info">
                             <h4>See the stats</h4> 
                         </div>
