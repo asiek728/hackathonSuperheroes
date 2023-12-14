@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
+import { HeroCard } from "../../components"
+
 const HeroPage = () => {
     const { id } = useParams()
     const [hero, setHero] = useState({ image: {}, rating: {} })
@@ -17,15 +19,7 @@ const HeroPage = () => {
 
     return (
         <>
-            <h1> {hero.name} </h1>
-            <img src={hero.image?.url} alt="hero-pic" />
-            <h2>Hero stats:</h2>
-            <p>Intelligence: {hero.powerstats.intelligence}</p>
-            <p>Strength: {hero.powerstats.strength}</p>
-            <p>speed: {hero.powerstats.speed}</p>
-            <p>durability: {hero.powerstats.durability}</p>
-            <p>power: {hero.powerstats.power}</p>
-            <p>combat: {hero.powerstats.combat}</p>
+            <HeroCard hero={hero} />
         </>
     )
 }

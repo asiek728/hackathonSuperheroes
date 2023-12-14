@@ -14,7 +14,7 @@ const HeroesPage = () => {
   return (
     <div className="heroes-container" >
       {heroes.map((hero) => (
-        <div key={hero.id} onClick={() => navigate(`/hero/${hero.id}`)} className="hero-card">
+        <div key={hero.id} onClick={() => navigate(`/heroes/${hero.id}`)} className="hero-card">
               <img src={hero.image?.url} alt="hero-pic" />
               <h4>{hero.name}</h4>
         </div>
