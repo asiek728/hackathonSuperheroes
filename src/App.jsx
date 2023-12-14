@@ -3,7 +3,9 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { HomePage, HeroesPage } from "./pages"
 import { NavBar } from './components'
+import "bootstrap/dist/css/bootstrap.min.css";
 import { HeroesProvider } from './contexts'
+
 
 function App() {
   return (

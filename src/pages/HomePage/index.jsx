@@ -1,11 +1,13 @@
 import React from 'react'
 import { RandomHero } from '../../components'
+import Instruction from '../../components/Instruction'
 
 const HomePage = () => {
     return (
         <>
-            <h1>Home Page</h1>
-            <p>explanation</p>
+            <div className="intro">
+                <Instruction/>
+            </div>
 
             <div id="hero">
                 <RandomHero />
