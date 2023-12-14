@@ -7,8 +7,8 @@ const Instruction = () => {
     const navigate = useNavigate()
     return (
         <section className="instruction-section">
-            <div className="title" onClick={() => navigate("/")}>
-                <h1>Assemble</h1>
+            <div  onClick={() => navigate("/")}>
+             
             </div>
             <div className="instruction-container">
                 <div>
@@ -16,13 +16,16 @@ const Instruction = () => {
                 </div>
                 <Carousel className="carousel">
                 <Carousel.Item className="intro-image">
-                        <img id="intro-image" src={"https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"} alt="batman" />
+                        <img  src={"https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"} alt="batman" />
                        <div className="carousel-info">
                             <h4>Select your superheroes </h4> 
                         </div>
                     </Carousel.Item>
-                    <Carousel.Item>
-                        <h1>Go</h1>
+                    <Carousel.Item  className="intro-image">
+                        <img id="heroes-image" src="/public/heroes.jpg" alt="heroes" />
+                        <div className="carousel-info">
+                            <h4>See all your liked sups </h4> 
+                        </div>
                     </Carousel.Item>
                 </Carousel>
 
@@ -31,7 +34,7 @@ const Instruction = () => {
             </div>
 
 
-            <div>
+            <div style={{marginTop: "4em"}}>
                 <h3>Play below!</h3>
             </div>
 
