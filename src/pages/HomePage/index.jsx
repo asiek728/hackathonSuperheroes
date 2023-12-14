@@ -9,6 +9,7 @@ const HomePage = () => {
 
             <div id="hero">
                 <RandomHero />
+                <button>see liked heroes</button>
             </div>
         </>
     )
